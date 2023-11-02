@@ -16,46 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0To-hg-ZyE">
-                                <rect key="frame" x="16" y="79" width="398" height="374"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxN-Q5-7mK">
-                                <rect key="frame" x="16" y="469" width="398" height="409"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7oC-XN-t09">
+                                <rect key="frame" x="16" y="235" width="398" height="56"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-MR-UoD">
+                                <rect key="frame" x="105.66666666666669" y="623.66666666666663" width="219" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="219" id="wYZ-hf-wMV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show Greeting">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="greetingButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lOm-cM-eJF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BxN-Q5-7mK" firstAttribute="top" secondItem="0To-hg-ZyE" secondAttribute="bottom" constant="16" id="0ty-fd-uXu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BxN-Q5-7mK" secondAttribute="bottom" constant="20" id="3Ob-CO-ISU"/>
-                            <constraint firstItem="BxN-Q5-7mK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Tf-RY-rfd"/>
-                            <constraint firstItem="0To-hg-ZyE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BTy-x8-BOk"/>
-                            <constraint firstItem="BxN-Q5-7mK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dcy-cX-OIr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BxN-Q5-7mK" secondAttribute="trailing" constant="16" id="KLo-fB-BmS"/>
-                            <constraint firstItem="0To-hg-ZyE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WhI-3v-pOa"/>
-                            <constraint firstItem="0To-hg-ZyE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="b0a-Xs-UpE"/>
-                            <constraint firstItem="BxN-Q5-7mK" firstAttribute="height" secondItem="0To-hg-ZyE" secondAttribute="height" multiplier="1.09397" id="grb-Kg-0Yu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0To-hg-ZyE" secondAttribute="trailing" constant="16" id="ns5-55-5Pa"/>
-                            <constraint firstItem="BxN-Q5-7mK" firstAttribute="width" secondItem="0To-hg-ZyE" secondAttribute="width" id="t84-e5-9O0"/>
+                            <constraint firstItem="7oC-XN-t09" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RBt-QV-M8j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7oC-XN-t09" secondAttribute="trailing" constant="16" id="URI-xC-n15"/>
+                            <constraint firstItem="rjp-MR-UoD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WqL-1d-RvJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rjp-MR-UoD" secondAttribute="bottom" multiplier="4:3" id="jb4-UC-jKk"/>
+                            <constraint firstItem="7oC-XN-t09" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="y0n-NP-0TO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingButton" destination="rjp-MR-UoD" id="8Q3-kR-LXs"/>
+                        <outlet property="greetingLabel" destination="7oC-XN-t09" id="JvP-mT-6Wh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30.697674418604652" y="-36.695278969957087"/>
+            <point key="canvasLocation" x="186.97674418604652" y="-35.407725321888414"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
